@@ -13,12 +13,12 @@ body, html {
     background-position: center;
     background-size: cover;
 
-    background-image: url("../assets/placeholder.jpg"); 
+    background-image: url("https://www.ana.co.jp/cont-image/common/etc/1141-lang-multi-full.jpg"); 
     min-height: 100%;  
     }
 
     .intro {
-    background-color: rgb(255, 255, 153, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
     }
 
     .submissions {
