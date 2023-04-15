@@ -1,144 +1,111 @@
 <!-- this webpage template was obtained from https://www.w3schools.com/w3css/tryw3css_templates_startup.htm -->
+<!-- a lot of w3schools css are used in this webpage, which I learnt how they are used and adapted them for my own usage -->
 
 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>NM2207 Final Project</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/appstyle.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script> -->
-    <script defer type="text/javascript" src="appscripts/main.js"></script>
+  <title>NM2207 Final Project Data Story</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script> -->
+  <script defer type="text/javascript" src="appscripts/main.js"></script>
 </head>
 
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">INTRODUCTION</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#pets_in_japan" class="w3-bar-item w3-button">PETS IN JAPAN</a>
-      <a href="#trends" class="w3-bar-item w3-button"><i class="fa fa-bars"></i> TRENDS</a>
-      <a href="#owners" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ABOUT OWNERS</a>
-      <a href="#why_pets" class="w3-bar-item w3-button"><i class="fa fa-question"></i> WHY PETS</a>
-      <a href="#conclusion" class="w3-bar-item w3-button">CONCLUSION</a>
-      <a href="#submissions" class="w3-bar-item w3-button"><i class="fa fa-desktop"></i> SUBMISSIONS</a>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">INTRODUCTION</a>
+      <!-- Right-sided navbar links -->
+      <!-- Clicking on the buttons brings the user to different sections of the webpage based on the id -->
+      <div class="w3-right w3-hide-small">
+        <a href="#pets_in_japan" class="w3-bar-item w3-button">PETS IN JAPAN</a>
+        <a href="#trends" class="w3-bar-item w3-button"><i class="fa fa-bars"></i> TRENDS</a>
+        <a href="#owners" class="w3-bar-item w3-button"><i class="fa fa-user"></i> ABOUT OWNERS</a>
+        <a href="#why_pets" class="w3-bar-item w3-button"><i class="fa fa-question"></i> WHY PETS</a>
+        <a href="#conclusion" class="w3-bar-item w3-button">CONCLUSION</a>
+        <a href="#submissions" class="w3-bar-item w3-button"><i class="fa fa-desktop"></i> SUBMISSIONS</a>
+      </div>
+
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<!-- <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav> -->
-
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="intro w3-display-left w3-text-black" style="padding:48px">
-    <span class="w3-xxlarge w3-hide-small">Welcome to my NM2207 Data Story!</span><br>
-    <!-- <span class="w3-xxlarge w3-hide-large w3-hide-medium">This Data Story is about Pet Ownership in Japan!</span><br> -->
-    <span class="w3-xlarge">This Data Story is about Pet Ownership in Japan!</span>
-    <p><a href="#pets_in_japan" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Click to find out more!</a></p>
-  </div> 
-  <!-- <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div> -->
-
-</header>
-
-<!-- Pets in Japan Section -->
-<div class="w3-container w3-white" style="padding:128px 16px" id="pets_in_japan">
-  <h1 class="w3-center">PETS IN JAPAN</h1>
-  <h3 class="w3-center">
-    RESEARCH QUESTION:
-  </h3>
-  <p class="w3-center w3-large">
-    Ever wondered how pet ownership looks like in Japan? What are the most common pets kept in Japan?
-  </p>
-  <p class="w3-center w3-large">
-  How have the ownership of common pets changed over time, and why have they changed? 
-  </p>
-
-  <p class="w3-center w3-large">
-    Let's first take a look at the common pets owned in Japan! The graph below shows the distribution of pets owned in 2022.
-  </p>
-
-  <div id="canvas-container-1">
-    <canvas id="overall-pets-bar-chart" width="300" height="300"></canvas>
   </div>
 
-  <p class="w3-center w3-small">
-    In a survey done in October 2022, the total number of respondents was 50,000, and 72.80% of them do not own pets
-  </p>
-  <div class="w3-center">
-    <button type="button" id="specifyCatsDogsButton" class="w3-black w3-padding-small w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Click to find out which pets are the most popular!</button>
-    <button type="button" id="showAllPetsButton" class="w3-black w3-padding-small w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Show all pets</button>
+
+  <!-- Header with full-height image -->
+  <!-- image rendered in css -->
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="intro w3-display-middle w3-text-black" style="padding:48px">
+      <span class="w3-xxlarge w3-hide-small"><b>PET OWNERSHIP IN JAPAN</b></span><br>
+      <span class="w3-large">A NM2207 data story by Soh Yong Xian Dan</span>
+      <p><a href="#pets_in_japan"
+          class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Click to
+          find out more!</a></p>
+    </div>
+
+
+  </header>
+
+  <!-- Pets in Japan Section -->
+  <div class="w3-container w3-white" style="padding:128px 16px" id="pets_in_japan">
+    <h1 class="w3-center"><b>PETS IN JAPAN</b></h1>
+    <h3 class="w3-center">
+      RESEARCH QUESTION:
+    </h3>
+    <p class="w3-center w3-large">
+      Ever wondered how pet ownership looks like in Japan? What are the most common pets kept in Japan?
+    </p>
+    <p class="w3-center w3-large">
+      How have the ownership of common pets changed over time, and why have they changed?
+    </p>
+
+    <p class="w3-center w3-large">
+      Let's first take a look at the common pets owned in Japan! The bar graph below shows the distribution of pets
+      owned in 2022.
+    </p>
+    <!-- somehow the y-axis limiter isn't working for the graphs in general -->
+    <div id="canvas-container-1">
+      <canvas id="overall-pets-bar-chart" width="50" height="50"></canvas>
+    </div>
+
+    <p class="w3-center w3-small">
+      In a survey done in October 2022, the total number of respondents was 50,000, and 72.80% of them do not own pets
+    </p>
+
+    <div class="w3-center">
+      <button type="button" id="specifyCatsDogsButton"
+        class="w3-black w3-padding-small w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Click to find out which
+        pets are the most popular!</button>
+      <button type="button" id="showAllPetsButton"
+        class="w3-black w3-padding-small w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Show all pets</button>
+    </div>
+
   </div>
-</div>
 
-  <!-- <div id="chartContainer">
-    <canvas id="canvas"></canvas>
-  </div>
 
-  <button type="button" id="switchButton">TEST</button> -->
-
-  <!-- <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Responsive</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-  </div> -->
-</div>
-
-<!-- Cats and dogs explanation -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px">
-  <div class="w3-row-padding">
-    <div class="w3-left">
-      <h1 class="w3-center">ABOUT PET CATS AND DOGS IN JAPAN</h1>
+  <!-- Cats and dogs explanation subsection -->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px">
+    <div class="w3-row-padding">
+      <div class="w3-left">
+        <h1 class="w3-center">ABOUT PET CATS AND DOGS IN JAPAN</h1>
         <p class="w3-large">
-          According to respondents in 2022, even though dogs were the most desired pet species among Japanese people, cats are closing in on the popularity of canines.
+          According to respondents in 2022, even though dogs were the most desired pet species among Japanese people,
+          cats are closing in on the popularity of canines.
         </p>
         <p class="w3-large">
-        From this data, some questions can be asked regarding the ownership of pet cats and dogs:
+          From this data, some questions can be asked regarding the ownership of pet cats and dogs:
         </p>
         <p class=" w3-large">
           1. What are the pet cat and dog ownership trends in the past few years?
@@ -147,403 +114,242 @@
           2. What are the main reasons why people decide to keep cats and dogs as pets?
         </p>
         <p class=" w3-large">
-          3. Did the Covid-19 pandemic in 2019 affect cat and dog ownership trends?
+          3. Did the Covid-19 pandemic in 2020 affect cat and dog ownership trends?
         </p>
-      <p><a href="#trends" class="w3-button w3-black">To find out more, scroll to the next section or click this button!</a></p>
-    </div>
-
-  </div>
-</div>
-
-<!-- Trends Section -->
-<div class="w3-container w3-white" style="padding:128px 16px" id="trends">
-  <h1 class="w3-center"><i class="fa fa-bars"></i> PET POPULATION TRENDS</h1>
-  <p class=" w3-large w3-center">
-    The graph below shows the population of pet cats and dogs in Japan from years 2013 to 2022
-  </p>
-
-  <div id="canvas-container-2">
-    <canvas id="population-trends-by-year-bar-chart" width="300" height="300"></canvas>
-  </div>
-
-
-</div>
-
-
-<!-- <div class="w3-container" style="padding:128px 16px" id="trends">
-  <h3 class="w3-center">THE TEAM</h3>
-  <p class="w3-center w3-large">The ones who runs this company</p>
-  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team2.jpg" alt="John" style="width:100%">
-        <div class="w3-container">
-          <h3>John Doe</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
+        <p><a href="#trends" class="w3-button w3-black">To find out more, scroll to the next section or click this
+            button!</a></p>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
-        <div class="w3-container">
-          <h3>Anja Doe</h3>
-          <p class="w3-opacity">Art Director</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
-        <div class="w3-container">
-          <h3>Mike Ross</h3>
-          <p class="w3-opacity">Web Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
-        <div class="w3-container">
-          <h3>Dan Star</h3>
-          <p class="w3-opacity">Designer</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 
-<!-- Promo Section "Statistics" -->
-<!-- <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">14+</span>
-    <br>Partners
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">55+</span>
-    <br>Projects Done
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">89+</span>
-    <br>Happy Clients
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">150+</span>
-    <br>Meetings
-  </div>
-</div> -->
-
-<!-- Owners Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="owners">
-  <h1 class="w3-center"><i class="fa fa-user"></i> ABOUT OWNERS</h1>
-  <p class="w3-center w3-large">What about the ownership of cats and dogs? The graph below shows the rate of cat and dog owners from years 2013 to 2021!</p>
-
-  <div id="canvas-container-3">
-    <canvas id="ownership-by-year-line-chart" width="300" height="300"></canvas>
-  </div>
-
-  </div>
-
-  <!-- <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
     </div>
   </div>
 
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
-    </div>
-  </div>
-</div> -->
-
-<!-- Modal for full size images on click-->
-<!-- <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div> -->
-
-
-<!-- Analysis of graphs -->
-<div class="w3-container w3-white" style="padding:128px 16px" id="trends">
-  <h2 class="w3-center">TAKEAWAYS FROM THE DATA</h2>
-  <p class="w3-center w3-large">What does the data shown above show about the relationship between cat and dog populations and ownership?</p>
-  <div class ="w3-row-padding w3-grayscale" style="margin-top:64px">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <div class="w3-container">
-          <h3 class="w3-center">Takeaway 1</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <div class="w3-container">
-          <h3 class="w3-center">Takeaway 2</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <div class="w3-container">
-          <h3 class="w3-center">Takeaway 3</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-card">
-        <div class="w3-container">
-          <h3 class="w3-center">Takeaway 4</h3>
-          <p class="w3-opacity">CEO & Founder</p>
-          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- More background info Section -->
-<div class="w3-container w3-dark-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h2>Covid and Pets</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-      tempor incididunt ut labore et dolore.</p>
-    </div>
-    <!-- <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Web Design</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-      </div>
-    </div> -->
-  </div>
-</div>
-
-<!-- Why Pets Section -->
-<div class="w3-container w3-center w3-light-grey" style="padding:128px 16px" id="why_pets">
-  <h1>SO, WHY CATS AND DOGS?</h1>
-  <p class="w3-large">The graph below shows the main reasons for owning cats and dogs in Japan</p>
-
-  <div id="canvas-container-4">
-    <canvas id="reasons-for-cats-bar-chart" width="600" height="600"></canvas>
-  </div>
-
-  <div id="canvas-container-5">
-    <canvas id="reasons-for-dogs-bar-chart" width="600" height="600"></canvas>
-  </div>
-  
-  <div class="w3-center">
-    <p>
-      <button type="button" id="topReasonsForPets" class="w3-black w3-padding-large w3-medium w3-margin-top w3-opacity w3-hover-opacity-off w3-margin-bottom">Click to show more!</button>
+  <!-- Cat and Dog Population Section -->
+  <div class="w3-container w3-white" style="padding:128px 16px" id="trends">
+    <h1 class="w3-center"><i class="fa fa-bars"></i> PET POPULATION TRENDS</h1>
+    <p class=" w3-large w3-center">
+      The line graph below shows the population of pet cats and dogs in Japan from years 2013 to 2022.
     </p>
 
-  <div id="canvas-container-6">
-    <canvas id="reasons-for-pets-bar-chart" width="300" height="400"></canvas>
-  </div>
-  
+    <p class="w3-large w3-center">
+      Click on the buttons to see the statistics for each pet!
+    </p>
+
+    <div id="canvas-container-2">
+      <canvas id="population-trends-by-year-bar-chart" width="50" height="50"></canvas>
+    </div>
+
+    <div class="w3-center">
+      <button type="button" id="showCatPopulationButton"
+        class="w3-black w3-padding-small w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Pet Cat
+        Population</button>
+      <button type="button" id="showDogPopulationButton"
+        class="w3-black w3-padding-small w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Pet Dog
+        Population</button>
+    </div>
+
+
+    <p class=" w3-large w3-center w3-padding-large">
+      For comparison, both datasets are combined into the bar graph below.
+    </p>
+
+    <div id="canvas-container-3" class="w3-padding-large">
+      <canvas id="cat-dog-population-by-year-bar-chart" width="300" height="400"></canvas>
+    </div>
 
   </div>
 
-  <!-- <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16"><b>10GB</b> Storage</li>
-        <li class="w3-padding-16"><b>10</b> Emails</li>
-        <li class="w3-padding-16"><b>10</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 10</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-third">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-red w3-xlarge w3-padding-48">Pro</li>
-        <li class="w3-padding-16"><b>25GB</b> Storage</li>
-        <li class="w3-padding-16"><b>25</b> Emails</li>
-        <li class="w3-padding-16"><b>25</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 25</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-    <div class="w3-third w3-section">
-      <ul class="w3-ul w3-white w3-hover-shadow">
-        <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-        <li class="w3-padding-16"><b>50GB</b> Storage</li>
-        <li class="w3-padding-16"><b>50</b> Emails</li>
-        <li class="w3-padding-16"><b>50</b> Domains</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-wide">$ 50</h2>
-          <span class="w3-opacity">per month</span>
-        </li>
-        <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
-        </li>
-      </ul>
-    </div>
-  </div> -->
-</div>
 
-<!-- Conclusion Section -->
-<div class="w3-container w3-black" style="padding:128px 16px" id="conclusion">
-  <h1 class="w3-center">CONCLUSION</h1>
-  <p class="w3-center w3-large">What can we conlude about pet cats and dogs in Japan?</p>
-  <div style="margin-top:48px">
-    <div class ="w3-row-padding w3-dark-grey" style="margin-top:64px">
-      <div class="w3-col l3 m6 w3-margin-bottom w3-margin-top">
+  <!-- Cat and Dog Ownership Section -->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="owners">
+    <h1 class="w3-center"><i class="fa fa-user"></i> ABOUT OWNERS</h1>
+    <p class="w3-center w3-large">What about the ownership of cats and dogs? The line graph below shows the rate of cat
+      and dog owners from years 2013 to 2021!</p>
+
+    <div id="canvas-container-4">
+      <canvas id="ownership-by-year-line-chart" width="300" height="500"></canvas>
+    </div>
+
+  </div>
+
+
+  <!-- Analysis of graphs subsection -->
+  <div class="w3-container w3-white" style="padding:128px 16px" id="trends">
+    <h2 class="w3-center">TAKEAWAYS FROM THE DATA</h2>
+    <p class="w3-center w3-large">What does the data shown above show about the relationship between cat and dog
+      populations and ownership?</p>
+    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+      <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
           <div class="w3-container">
-            <h3 class="w3-center">Takeaway 1</h3>
-            <p class="w3-opacity">CEO & Founder</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <h3 class="w3-center">Pet Cat vs Dog Population</h3>
+            <p class="w3-opacity">What's up with pet cats and dogs over the past years? </p>
+            <p>From the bar charts, we can see that the population of pet cats have increased on average over time,
+              while the population of pet dogs have decreased. The decrease in pet dog population is such that the total
+              population of pet cats is higher than total population of pet dogs.</p>
           </div>
         </div>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom w3-margin-top">
+      <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
           <div class="w3-container">
-            <h3 class="w3-center">Takeaway 2</h3>
-            <p class="w3-opacity">CEO & Founder</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <h3 class="w3-center">Pet Cat vs Dog Ownership</h3>
+            <p class="w3-opacity">What about pet ownership?</p>
+            <p>From the line charts, we can see that the number of pet dog owners has decreased over time, while the
+              number of pet cat owners has roughly managed to maintain over time. However, as a whole, the number of pet
+              dog owners is still higher than the number of pet cat owners across all years.</p>
           </div>
         </div>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom w3-margin-top">
+      <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
           <div class="w3-container">
-            <h3 class="w3-center">Takeaway 3</h3>
-            <p class="w3-opacity">CEO & Founder</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <h3 class="w3-center">Pet Cat Population vs Ownership</h3>
+            <p class="w3-opacity">Is there any correlation between pet cat population and ownership?</p>
+            <p>Comparing between the 2 graphs, pet cat population increased on average, while ownership maintained. This
+              may be an indicator that pet cat owners may own more than 1 pet cat.</p>
           </div>
         </div>
       </div>
-      <div class="w3-col l3 m6 w3-margin-bottom w3-margin-top">
+      <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
           <div class="w3-container">
-            <h3 class="w3-center">Takeaway 4</h3>
-            <p class="w3-opacity">CEO & Founder</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <h3 class="w3-center">Pet Dog Population vs Ownership</h3>
+            <p class="w3-opacity">What about for pet dogs?</p>
+            <p>Both pet dog population and pet down owners are decreasing, which indicate that less pet owners are
+              getting pet dogs. However, it is important to note that while pet dog population is lower than pet cat
+              population, the number of pet dog owners are higher than pet cat owners. This is further indication that
+              pet cat owners may own more than 1 pet cat, while also being indicative that pet dog owners only own 1
+              dog.</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
-    <br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+  </div>
+
+  <!-- More background info subsection -->
+  <div class="w3-container w3-dark-grey w3-padding-64">
+    <div class="w3-row-padding">
+      <div class="w3-col m9">
+        <h2>Recent Global Events and Pets</h2>
+        <p>It is important to note that global and local events may have affected the acquisation of pets in Japan,
+          causing the trends that we saw above.</p>
+        <p>For instance, the Covid-19 pandemic in 2020 caused a reduction in human interaction in Japan. According to
+          news reports, pet ownership increased during Covid-19 due to an increase in the need for companionship. This
+          can be noted from the increase in pet cat population, as well as pet cat ownership, from 2020 to 2021.</p>
+        <p>On the other hand, the Russia-Ukraine war that broke out in early 2022 has caused pet food prices to
+          increase, which may be a factor in causing pet populations to decrease in 2022 as pets are less affordable.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Pets Section -->
+  <div class="w3-container w3-center w3-light-grey" style="padding:128px 16px" id="why_pets">
+    <h1>SO, WHY CATS AND DOGS?</h1>
+    <p class="w3-large">The bar graphs below shows the main reasons for owning cats and dogs in Japan</p>
+
+    <div id="canvas-container-5" class="w3-center">
+      <canvas id="catreasons-bar-chart" width="1200" height="300"></canvas>
+      <canvas id="dogreasons-bar-chart" width="1200" height="300"></canvas>
+    </div>
+
+    <div class="w3-center">
       <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
+        <button type="button" id="topReasonsForPets"
+          class="w3-black w3-padding-large w3-medium w3-margin-top w3-opacity w3-hover-opacity-off w3-margin-bottom">Click
+          to show more reasons!</button>
       </p>
-    </form> -->
-    <!-- Image of location/map -->
-    <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px"> -->
+    </div>
   </div>
-</div>
 
-<!-- Submissions section -->
-<div class="submissions w3-center" style="padding:128px 16px" id="submissions">
-  <h2>
-  SUBMISSIONS HERE
-  </h2>
-  <p>
-   Week 9 project submission <a href="Week 9 submission final project.docx">here</a>
-  </p>
-  
-  <p>
-  Week 10 diary entry <a href="Week 10 diary entry.docx">here</a>
-  </p>
+  <!-- Conclusion Section -->
+  <div class="w3-container w3-black" style="padding:128px 16px" id="conclusion">
+    <h1 class="w3-center">CONCLUSION</h1>
+    <p class="w3-center w3-large">What can we conlude about pet cats and dogs in Japan?</p>
+    <div style="margin-top:48px">
+      <div class="w3-row-padding w3-dark-grey" style="margin-top:64px">
+        <div class="w3-col l6 m6 w3-margin-bottom w3-margin-top">
+          <div class="w3-card">
+            <div class="w3-container">
+              <h3 class="w3-center">Popularity of cats and dogs</h3>
+              <p class="w3-opacity w3-center">As pets</p>
+              <p>Cats and Dogs are the most popular pets in Japan, surpassing other types of pets by large percentages.
+                However, it is still important to note that majority (72.8%) of Japanese do not own pets.</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l6 m6 w3-margin-bottom w3-margin-top">
+          <div class="w3-card">
+            <div class="w3-container">
+              <h3 class="w3-center">Population and Ownership</h3>
+              <p class="w3-opacity w3-center">The relationship</p>
+              <p>While pet cat population is higher than pet dog population, the ownership of pet dogs is higher than
+                that of pet cats, indicating that pet cat owners typically own more than 1 cat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l6 m6 w3-margin-bottom w3-margin-top">
+          <div class="w3-card">
+            <div class="w3-container">
+              <h3 class="w3-center">Reasons for keeping pet cats</h3>
+              <p class="w3-opacity w3-center">Linking to population and ownership</p>
+              <p>The top reason for keeping pet cats is by adopting strays, making up 30.5% of reasons. This is followed
+                by because the previous pet passed away, and because a friend asked the owner to take care of the cat.
+                This shows that adopting stray cats is a popular way of getting a pet cat, and may explain the high
+                amount of pet cats despite lower number of pet owners. We also observe sentimental value of having a pet
+                being a factor, with owners replacing pet cats that passed away.</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l6 m6 w3-margin-bottom w3-margin-top">
+          <div class="w3-card">
+            <div class="w3-container">
+              <h3 class="w3-center">Reasons for keeping pet dogs</h3>
+              <p class="w3-opacity w3-center">Constrasting with that for cats</p>
+              <p>The top reason for keeping dogs is because the previous pet passed away (at 26%), followed by seeing it
+                in a pet shop and desiring it. This shows that the main reason owners get pet dogs is for sentimental
+                value, to replace their previous pets. Other than that, owners also get pet dogs because of the
+                popularity of dogs as pets, hence getting them from pet stores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <p>
-    Week 11 diary entry <a href="Week 11 diary entry.docx">here</a>
+  <!-- Submissions section -->
+  <div class="submissions w3-center" style="padding:128px 16px" id="submissions">
+    <h2>
+      NM2207 PROJECT SUBMISSIONS HERE
+    </h2>
+    <p>
+      Week 9 project submission <a href="Week 9 submission final project.docx">here</a>
     </p>
 
-      <p>
-    Week 12 diary entry <a href="Week 12 diary entry.docx">here</a>
+    <p>
+      Week 10 diary entry <a href="Week 10 diary entry.docx">here</a>
     </p>
-</div>
+
+    <p>
+      Week 11 diary entry <a href="Week 11 diary entry.docx">here</a>
+    </p>
+
+    <p>
+      Week 12 diary entry <a href="Week 12 diary entry.docx">here</a>
+    </p>
+  </div>
 
 
 
 
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <!-- <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div> -->
-  <!-- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
-</footer>
+  <!-- Footer -->
+  <!-- button sends webpage back to the very top -->
+  <footer class="w3-center w3-black w3-padding-64">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </footer>
 
 
 </body>
+
 </html>
